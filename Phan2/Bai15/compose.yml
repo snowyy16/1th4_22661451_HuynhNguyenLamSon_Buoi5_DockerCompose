@@ -1,0 +1,8 @@
+services:
+  redis:
+    image: redis:alpine
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5' # Giới hạn 50% CPU
+          memory: 512M # Giới hạn 512MB RAM

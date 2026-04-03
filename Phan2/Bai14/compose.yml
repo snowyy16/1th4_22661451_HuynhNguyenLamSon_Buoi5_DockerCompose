@@ -1,0 +1,15 @@
+services:
+  app1:
+    image: alpine
+    networks:
+      - my-private-net
+    command: sleep infinity
+  app2:
+    image: alpine
+    networks:
+      - my-private-net
+    command: sleep infinity
+
+networks:
+  my-private-net:
+    driver: bridge
